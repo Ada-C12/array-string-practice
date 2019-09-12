@@ -1,32 +1,17 @@
 require_relative "test_helper"
 
 describe "Practice Exercises" do
-  describe "valid palindrome" do
-    it "works for 1-word palindromes" do
-      expect(is_palindrome("a")).must_equal true
-      expect(is_palindrome("racecar")).must_equal true
-      expect(is_palindrome("poop")).must_equal true
+  describe "remove duplicates" do
+    it "works for 1 element strings" do
+      expect(remove_duplicates([1])).must_equal [1]
+    end
+    
+    it "works for empty arrays" do
+      expect(remove_duplicates([])).must_equal []
     end
 
-    it "will return false for non-palindrome 1-word strings" do
-      expect(is_palindrome("race")).must_equal false
-      expect(is_palindrome("pasta")).must_equal false
-    end
-
-    it "works for empty strings" do
-      expect(is_palindrome("")).must_equal true
-    end
-
-    it "will return true for long phrases with spaces and punctuation" do
-      palindrome_word = "A man, a plan, a canal: Panama"
-
-      expect(is_palindrome(palindrome_word)).must_equal true
-    end
-
-    it "will return false for non-palindrome long phrases with spaces and punctuation" do
-      palindrome_word = "A man, a plan, a canal: Panam"
-      expect(is_palindrome(palindrome_word)).must_equal false
-
+    it "will remove duplicates for longer arrays" do
+      expect(remove_duplicates([1, 2, 2, 3, 3, 4])).must_equal [1, 2, 3, 4]
     end
   end
 
