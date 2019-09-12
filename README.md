@@ -80,4 +80,4 @@ All given inputs are in lowercase letters a-z.
 Taken from [leetcode.com](https://leetcode.com):
 
 - [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
-- [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+- [Remove duplicates](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
