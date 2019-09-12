@@ -2,10 +2,12 @@
 
 In this exercise you will practice using arrays & strings to solve coding problems, and then identify the time and space complexity of your solution.  Try to write solutions with minimal time and space complexity.
 
-Do not use the following methods:
+Do not use the following methods or other ruby library methods that make this easy:
 
-- `reverse`
-- `reverse!`
+- `reject`
+- `reject!`
+- `uniq`
+- `uniq!`
 
 ## Learning Goals
 
