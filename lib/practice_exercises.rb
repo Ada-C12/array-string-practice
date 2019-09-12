@@ -1,9 +1,15 @@
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 def remove_duplicates(list)
-  raise NotImplementedError, "Not implemented yet"
+  list.length.times do |i|
+    if list[i] == list[i + 1]
+      list.delete_at i + 1
+    end
+  end
+  list
 end
+
 
 # Time Complexity: ?
 # Space Complexity: ?
