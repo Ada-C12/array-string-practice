@@ -1,7 +1,7 @@
 
 # Time Complexity: ?
 # Space Complexity: ?
-def is_palindrome(string)
+def remove_duplicates(list)
   raise NotImplementedError, "Not implemented yet"
 end
 
