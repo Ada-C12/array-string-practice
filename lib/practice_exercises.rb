@@ -1,13 +1,31 @@
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 def remove_duplicates(list)
-  raise NotImplementedError, "Not implemented yet"
+  index = 0
+  last_value = nil
+  list.each do
+    if list[index] == last_value
+      list.delete_at(index)
+    else
+      last_value = list[index]
+      index += 1
+    end
+  end
+  return list
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n * m), where n is the iteration over the unknown prefix variable, and m is the iteration over each object in the strings array
+# Space Complexity: O(1)
 def longest_prefix(strings)
-  raise NotImplementedError, "Not implemented yet"
+  prefix = strings.first
+  # iterates over the length of the first string
+  prefix.length.times do |index|
+    # compares all other strings in array to current prefix string
+    strings.each do |string|
+      # deletes character at current index through last character in prefix if current prefix index is no longer equal to string index in current loop
+      prefix.slice!(index..(string.length - 1)) if prefix[index] != string[index]
+    end
+  end
+  return prefix
 end
-
