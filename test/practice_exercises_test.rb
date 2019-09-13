@@ -39,5 +39,13 @@ describe "Practice Exercises" do
 
       expect(output).must_equal ""
     end
+
+    it "will work with these other strings" do
+      strings = ["flower","faster", "flower", "flight"]
+
+      output = longest_prefix(strings)
+
+      expect(output).must_equal "f"
+    end
   end
 end
