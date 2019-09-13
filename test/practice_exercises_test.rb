@@ -41,11 +41,27 @@ describe "Practice Exercises" do
     end
     
     it "will work for strings that have exactly the same letters" do
-      strings = ["flower","flower","flower"]
+      strings = ["cat","cat","cat"]
       
       output = longest_prefix(strings)
       
-      expect(output).must_equal "flower"
+      expect(output).must_equal "cat"
+    end
+    
+    it "will work for only one string" do
+      strings = ["bird"]
+      
+      output = longest_prefix(strings)
+      
+      expect(output).must_equal "bird"
+    end
+    
+    it "will work for two strings" do
+      strings = ["flower", "flow"]
+      
+      output = longest_prefix(strings)
+      
+      expect(output).must_equal "flow"
     end
   end
 end

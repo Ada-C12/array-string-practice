@@ -1,6 +1,5 @@
-
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n/2) which means O(n). n is the length of the list.
+# Space Complexity: O(1). It always returns one array.
 def remove_duplicates(list)
   return list if list.length == 1 || list.empty?
   
@@ -18,10 +17,11 @@ def remove_duplicates(list)
   return list
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n*m). n is the length of the strings array. m is the length of the first string.
+# Space Complexity: O(1). It always returns one string.
 def longest_prefix(strings)
   first_string = strings[0]
+  return first_string if !strings[1]
   
   index = 0
   continue = true
