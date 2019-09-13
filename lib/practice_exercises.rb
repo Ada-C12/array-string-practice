@@ -25,7 +25,7 @@ def longest_prefix(strings)
     character = prefix[index]
     # compares all other strings in array to current prefix string
     strings.each do |string|
-      # deletes character at current index through last character in prefix if current prefix index is no longer equal to string in current loop
+      # deletes character at current index through last character in prefix if current prefix index is no longer equal to string index in current loop
       prefix.slice!(index..(string.length - 1)) if character != string[index]
     end
   end
