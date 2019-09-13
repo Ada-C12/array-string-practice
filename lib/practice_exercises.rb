@@ -13,6 +13,10 @@ end
 # Time Complexity: ?
 # Space Complexity: ?
 def longest_prefix(strings)
-  # remove_duplicates
+  prefix = ->s1, s2 { s1.each_char.zip(s2.each_char)
+                        .take_while {|c1, c2| c1 == c2}
+                        .map(&:first).join }
+                        
+  strings.reduce(&prefix)
 end
 
