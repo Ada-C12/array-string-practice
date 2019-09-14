@@ -17,7 +17,7 @@ def remove_duplicates(list)
   return list
 end
 
-# Time Complexity: O(n*m). n is the length of the strings array. m is the length of the first string.
+# Time Complexity: O(n*m). n is the length of the strings array. m is the length of the longest prefix.
 # Space Complexity: O(1). It always returns one string.
 def longest_prefix(strings)
   first_string = strings[0]
