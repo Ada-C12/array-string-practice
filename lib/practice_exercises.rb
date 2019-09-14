@@ -1,13 +1,15 @@
 # Time Complexity: O(n/2) which means O(n). n is the length of the list.
 # Space Complexity: O(1). It always returns one array.
 def remove_duplicates(list)
-  return list if list.length == 1 || list.empty?
+  length = list.length
+  return list if length <= 1
   
   i = 0
   
-  while i < list.length - 1
+  while i < (length - 1)
     if list[i] == list[i+1]
       list.delete_at(i+1)
+      length -= 1
       
     else
       i += 1      
