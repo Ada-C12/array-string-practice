@@ -1,4 +1,4 @@
-# Time Complexity: O(n). n is the length of the list.
+# Time Complexity: O(n^2). n is the length of the list.  It is n^2 because of the delete_at function.
 # Space Complexity: O(1). It always returns one array.
 def remove_duplicates(list)
   length = list.length
