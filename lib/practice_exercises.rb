@@ -13,25 +13,25 @@ def remove_duplicates(list)
   return list
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
 def longest_prefix(strings)
   index = 0
-  prefix = []
+  prefix = ""
   while index < strings[0].length
     letter = nil
     strings.each do |string|
       if letter == nil
         letter = string.slice(index)
       elsif letter != string.slice(index)
-        return prefix.join
+        return prefix
       elsif letter != nil && string.slice(index) == nil
-        return prefix.join
+        return prefix
       end
     end
-    prefix << letter
+    # Which takes up more space: string concatenation or creating an array that I shovel letters into?
+    prefix += letter
     index += 1
   end
-  return prefix.join
+  return prefix
 end
-
