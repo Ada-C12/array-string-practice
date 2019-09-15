@@ -1,4 +1,4 @@
-# Time Complexity: O(n/2) which means O(n). n is the length of the list.
+# Time Complexity: O(n). n is the length of the list.
 # Space Complexity: O(1). It always returns one array.
 def remove_duplicates(list)
   length = list.length
