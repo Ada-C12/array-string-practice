@@ -7,7 +7,7 @@
 def remove_duplicates(list)
   length = list.length
   i = 0
-  while i < length 
+  while i < length - 1
     if list[i] == list[i + 1]
       list.delete_at(i + 1)
     end 
@@ -16,18 +16,23 @@ def remove_duplicates(list)
   return list 
 end
 
-# Time Complexity: 
-# Space Complexity: 
+# Time Complexity: O(n²)
+# Space Complexity: O(n*m)
 def longest_prefix(strings)
-  #["flower", "fork", "fuss"]
-  prefix = ""
-  i = 0
+  first_string = strings[0].chars #an array of all the characters of the first string 
+  matches = 0 
 
-  while i < 
-  #  strings[0][i] == strings[i + 1][i]
-  #  prefix << strings[0][i]
+  #iterate over every letter of the first string
+  first_string.each_with_index do |char, index|
+    #iterate over every string to check if each string matches first strings letter
+    break if strings[1..-1].any?{|string| string[index] != char}
+      matches += 1 
   end 
-  return prefix
+  #modify the first string that we compared all the other strings to 
+  #only keep the letters of the first string that matched all the strings
+  prefix = first_string.slice(0,matches)
+  return prefix.join('')
+end 
 
-end
-
+#Could be refactored to compare all words to the shortest length word of the array rather than the first word- 
+#If the first word also happens to be the longest word, I think it will end up comparing against nil a few times?
