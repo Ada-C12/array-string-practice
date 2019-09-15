@@ -5,11 +5,13 @@
   #Therefore I'm assuming it is O of n squared.
 # Space Complexity: O(1)
 def remove_duplicates(list)
+  length = list.length
   i = 0
-  list.each do |i|
+  while i < length 
     if list[i] == list[i + 1]
       list.delete_at(i + 1)
     end 
+    i += 1
   end 
   return list 
 end
@@ -17,6 +19,15 @@ end
 # Time Complexity: 
 # Space Complexity: 
 def longest_prefix(strings)
+  #["flower", "fork", "fuss"]
+  prefix = ""
+  i = 0
+
+  while i < 
+  #  strings[0][i] == strings[i + 1][i]
+  #  prefix << strings[0][i]
+  end 
+  return prefix
 
 end
 
