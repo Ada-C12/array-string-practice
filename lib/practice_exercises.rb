@@ -30,15 +30,16 @@ end
 def longest_prefix(strings)
   # raise NotImplementedError, "Not implemented yet"
   prefix = ""
+  return prefix if strings.empty?
   first_string = strings.first
   first_string.length.times do |i|
     char = first_string[i]
-    strings.each do |string|
+    strings.each_with_index do |string, index|
       break if string[i].nil? || string[i] != char
-      prefix += string[i] if string == strings.last
+      prefix += string[i] if index == (strings.length - 1) && i == 0
+      prefix += string[i] if index == (strings.length - 1) && prefix != "" && i > 0
     end
   end
-  
   return prefix
   
 end
