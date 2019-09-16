@@ -1,11 +1,19 @@
 
-# Time Complexity: O(n) where n is the size of the list
+# Time Complexity: O(n^2) where n is the size of the list.
 # Space Complexity: O(1) slice! method changes the original array. It does not change the size of the input
 def remove_duplicates(list)
+  # list.each do |num|
+  #   if list.count(num) > 1
+  #     list.slice!(list.index(num))
+  #   end
+  # end
+  # return list
+  i = 0
   list.each do |num|
-    if list.count(num) > 1
-      list.slice!(list.index(num))
+    if list[i] == list[i + 1]
+      list.slice!(list[i + 1])
     end
+    i += 1
   end
   return list
 end
