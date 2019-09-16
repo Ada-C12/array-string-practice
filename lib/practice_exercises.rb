@@ -43,45 +43,47 @@ end
 
 
 
-def longest_prefix_ALT(strings)
-  # find the longest common prefix string amongst an array of strings
-  # Time O(n^2) and Space O(n)
-  
-  # get the match results from the first 2 strings 
-  prev_match = get_head_matches(strings[0], strings[1])
-  
-  # if the first 2 strings don't have any chars in common, answer is automatically ""
-  if prev_match == ""
-    return ""
-  end
-  
-  # compare the prev_match with each subsequent string, modifying prev_match with each iteration
-  ((strings.length)-2).times do |index|
-    prev_match = get_head_matches(prev_match, strings[index+2])
-    puts
-  end
-  
-  return prev_match
-end
+#### ALTERNATE METHOD, THOUGHT I COULD DO BETTER THAN O(n^2) BUT COULDN'T ####
 
-def get_head_matches(string1, string2)    
-  # O(n) time & O(1) space
-  shorter_string = [string1, string2].min_by { |str| str.length }
-  
-  index = 0
-  match = ""
-  
-  while index < shorter_string.length
-    if string1[index] == string2[index]
-      match << string1[index]
-    else 
-      break
-    end
-    
-    index += 1
-  end
-  
-  return match
-end
+# def longest_prefix_ALT(strings)
+#   # find the longest common prefix string amongst an array of strings
+#   # Time O(n^2) and Space O(n)
+
+#   # get the match results from the first 2 strings 
+#   prev_match = get_head_matches(strings[0], strings[1])
+
+#   # if the first 2 strings don't have any chars in common, answer is automatically ""
+#   if prev_match == ""
+#     return ""
+#   end
+
+#   # compare the prev_match with each subsequent string, modifying prev_match with each iteration
+#   ((strings.length)-2).times do |index|
+#     prev_match = get_head_matches(prev_match, strings[index+2])
+#     puts
+#   end
+
+#   return prev_match
+# end
+
+# def get_head_matches(string1, string2)    
+#   # O(n) time & O(1) space
+#   shorter_string = [string1, string2].min_by { |str| str.length }
+
+#   index = 0
+#   match = ""
+
+#   while index < shorter_string.length
+#     if string1[index] == string2[index]
+#       match << string1[index]
+#     else 
+#       break
+#     end
+
+#     index += 1
+#   end
+
+#   return match
+# end
 
 
