@@ -13,6 +13,18 @@ describe "Practice Exercises" do
     it "will remove duplicates for longer arrays" do
       expect(remove_duplicates([1, 2, 2, 3, 3, 4]).reject{|num| num == nil }).must_equal [1, 2, 3, 4]
     end
+
+    it "will remove duplicates for longer arrays" do
+      expect(remove_duplicates([1, 2, 2, 2, 2, 3, 4]).reject{|num| num == nil }).must_equal [1, 2, 3, 4]
+    end
+
+    it "will return the same array if there are no duplicates" do
+      expect(remove_duplicates([1, 2, 3, 4]).reject{|num| num == nil }).must_equal [1, 2, 3, 4]
+    end
+
+    it "will remove duplicates for longer arrays" do
+      expect(remove_duplicates([2, 2, 2, 2, 2]).reject{|num| num == nil }).must_equal [2]
+    end
   end
 
   describe "Longest valid substring" do
