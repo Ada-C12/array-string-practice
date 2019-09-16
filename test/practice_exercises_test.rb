@@ -5,19 +5,19 @@ describe "Practice Exercises" do
     it "works for 1 element strings" do
       expect(remove_duplicates([1])).must_equal [1]
     end
-    
+
     it "works for empty arrays" do
       expect(remove_duplicates([])).must_equal []
     end
 
     it "will remove duplicates for longer arrays" do
-      expect(remove_duplicates([1, 2, 2, 3, 3, 4]).reject{|num| num == nil }).must_equal [1, 2, 3, 4]
+      expect(remove_duplicates([1, 2, 2, 3, 3, 4]).reject { |num| num == nil }).must_equal [1, 2, 3, 4]
     end
   end
 
   describe "Longest valid substring" do
     it "will work for the README strings" do
-      strings = ["flower","flow","flight"]
+      strings = ["flower", "flow", "flight"]
 
       output = longest_prefix(strings)
 
@@ -25,7 +25,7 @@ describe "Practice Exercises" do
     end
 
     it "will work for the strings with the common prefix in the rear" do
-      strings = ["flower","flow","flight", "fpastafl"]
+      strings = ["flower", "flow", "flight", "fpastafl"]
 
       output = longest_prefix(strings)
 
@@ -33,7 +33,7 @@ describe "Practice Exercises" do
     end
 
     it "will work for the README strings" do
-      strings = ["dog","racecar","car"]
+      strings = ["dog", "racecar", "car"]
 
       output = longest_prefix(strings)
 
