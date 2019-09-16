@@ -1,13 +1,49 @@
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: o(n)
+# Space Complexity: o(1)
+
+# num = [1, 2, 2, 3, 4, 4]
 def remove_duplicates(list)
-  raise NotImplementedError, "Not implemented yet"
+  i = 0
+  while i <= list.length
+    if list[i] == list[i + 1]
+      list.delete_at(i)
+    end
+    i += 1
+  end
+
+  # print list.length
+  return list
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# remove_duplicates(num)
+#==============================================================
+
+# Time Complexity: o(n^2)
+# Space Complexity: ?o(1)
+
 def longest_prefix(strings)
-  raise NotImplementedError, "Not implemented yet"
-end
+  total_words = strings.length
+  if total_words == 0
+    return ""
+  end
 
+  if total_words == 1
+    return strings[0]
+  end
+
+  longest_prefix = ""
+  total_words.times do |index|
+    word = strings[index]
+    i = index + 1
+    while i < total_words
+      next_word = strings[i]
+      if word[i] == next_word[i]
+        longest_prefix += word[i]
+        break
+      end
+      i += 1
+    end
+  end
+  return longest_prefix
+end
