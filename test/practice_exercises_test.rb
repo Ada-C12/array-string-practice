@@ -39,5 +39,13 @@ describe "Practice Exercises" do
 
       expect(output).must_equal ""
     end
+
+    it "will update shorter prefix strings" do
+      strings = ["bbb","bb"]
+
+      output = longest_prefix(strings)
+
+      expect(output).must_equal "bb"
+    end
   end
 end

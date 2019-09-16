@@ -39,7 +39,13 @@ def longest_prefix(strings)
     (strings.length - 1).times do |i|
       current_string = strings[i + 1]
 
-      length = prefix.length < current_string.length ? prefix.length : current_string.length
+      if prefix.length < current_string.length 
+        length = prefix.length
+      else
+        length = current_string.length
+        prefix = prefix[0...length]
+      end
+
       length.times do |j|
         if prefix[j] != current_string[j]
           prefix = prefix[0...j]
