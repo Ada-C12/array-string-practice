@@ -20,7 +20,7 @@ end
 #==============================================================
 
 # Time Complexity: o(n^2)
-# Space Complexity: ?o(1)
+# Space Complexity: ?o(n)
 
 def longest_prefix(strings)
   # If there is no common prefix, return an empty string
