@@ -20,32 +20,30 @@ end
 #==============================================================
 
 # Time Complexity: o(n^2)
-# Space Complexity: ?o(1)
+# Space Complexity: ?o(n)
 
 def longest_prefix(strings)
-  # If there is no common prefix, return an empty string
   total_words = strings.length
+  prefix = ""
+
   if total_words == 0
-    return ""
+    return prefix
   end
+
   if total_words == 1
     return strings[0]
   end
 
-  longest_prefix = ""
-  i = 0
-  strings[0].length.times do
-    word = strings[0][i]
-    common_word = 0
-    strings.each do |string|
-      if word == string[i]
-        common_word += 1
+  total_words.times do |index|
+    word = strings[index]
+    i = index + 1
+    while i < total_words
+      next_word = strings[i]
+      if prefix[index] != word[index] && word[index] == next_word[index]
+        prefix += word[index]
       end
+      i += 1
     end
-    if common_word == strings.length
-      longest_prefix << word
-    end
-    i += 1
   end
-  return longest_prefix
+  return prefix
 end
