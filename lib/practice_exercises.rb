@@ -20,8 +20,8 @@ def remove_duplicates(list)
   
 end
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n) - Although there are several loops, they are both proportional to the array being tested
+# Space Complexity: O(1) - no new data structures are being made
 
 # strings being passed in is an array of strings
 def longest_prefix(strings)
@@ -45,6 +45,7 @@ def longest_prefix(strings)
   i = 0 # I am the word you're on
   j = 0 # I am the character you're on
   k = 0 # I am the last characer that matched
+  
   # binding.pry
   until j == max_length || i + 1 == strings.length do
     if strings[i][j] == strings[i + 1][j]
