@@ -11,7 +11,7 @@ describe "Practice Exercises" do
     end
     
     it "will remove duplicates for longer arrays" do
-      expect(remove_duplicates([1, 2, 2, 3, 3, 4])).reject{|num| num == nil }).must_equal [1, 2, 3, 4]
+      expect(remove_duplicates([1, 2, 2, 3, 3, 4]).reject{|num| num == nil }).must_equal [1, 2, 3, 4]
     end
   end
   
@@ -24,6 +24,14 @@ describe "Practice Exercises" do
       expect(output).must_equal "fl"
     end
     
+    it "will work for the strings that are the same" do 
+      strings = ["flower","flower","flower"]
+      
+      output = longest_prefix(strings)
+      
+      expect(output).must_equal "flower"
+    end
+    
     it "will work for the strings with the common prefix in the rear" do
       strings = ["flower","flow","flight", "fpastafl"]
       
@@ -31,6 +39,7 @@ describe "Practice Exercises" do
       
       expect(output).must_equal "f"
     end
+    
     
     it "will work for the README strings" do
       strings = ["dog","racecar","car"]
