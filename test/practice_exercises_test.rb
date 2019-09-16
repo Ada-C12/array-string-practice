@@ -32,6 +32,14 @@ describe "Practice Exercises" do
       expect(output).must_equal "f"
     end
 
+    it "returns the whole word if all match" do
+      strings = ["flower","flower","flower"]
+
+      output = longest_prefix(strings)
+
+      expect(output).must_equal "flower"
+    end
+
     it "will work for the README strings" do
       strings = ["dog","racecar","car"]
 
