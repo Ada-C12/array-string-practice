@@ -14,11 +14,17 @@ def remove_duplicates(list)
   return unique_items
 end
 
-# Did not have time to complete
+# Did not have time to complete all the way
 
-# Time Complexity: ?
-# Space Complexity: ?
-# def longest_prefix(strings)
-#   raise NotImplementedError, "Not implemented yet"
-# end
+# Time Complexity: O(n^2)
+# Space Complexity: O(n) 
+def longest_prefix(strings)
+  prefix_string = ""
+  strings.first.length.times do |index|
+    string.each do |string|
+      string[index]
+    end
+    return prefix_string
+  end
+end
 
