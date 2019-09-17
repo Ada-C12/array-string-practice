@@ -11,7 +11,7 @@ def remove_duplicates(list)
   return list
 end
 
-# Time Complexity: O(logn)
+# Time Complexity: O(n)
 # Space Complexity: O(n)
 
 def longest_prefix(strings)
