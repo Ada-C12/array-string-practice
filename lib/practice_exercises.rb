@@ -1,6 +1,6 @@
 
-# Time Complexity: ?
-# Space Complexity: ?
+# Time Complexity: O(n)
+# Space Complexity: O(1)
 def remove_duplicates(list)
   new_array = []
     list.each do  |i|   
@@ -11,21 +11,14 @@ def remove_duplicates(list)
   return new_array 
 end
 
-# # Time Complexity: ?
-# # Space Complexity: ?
-# def longest_prefix(strings)
-#   raise NotImplementedError
-# end
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+def longest_prefix(strings)
+  min = strings.min 
+  max = strings.max
+  string_pre = min.size.times do |i| 
+    break i if min[i] != max[i]
+  end
+  min[0...string_pre]
+end
 
-# list = []
-#   list.each do |e|
-#     unless e == list.include?(e)
-#       new_array << e
-#     end
-
-# list.each do |i|
-#   count = 0 
-#   if list[count] == list[i+1]
-#     count += 1
-#   end
-# end
