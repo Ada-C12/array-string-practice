@@ -5,23 +5,25 @@ def remove_duplicates(list)
   # raise NotImplementedError, "Not implemented yet"
   return nil if list.nil?
   return list if list.empty?
-  
-  length = list.length
   i = 0
-  j = length - 1
-  
-  until i >= j
-    if list[i] == list[i + 1]
-      temp = i 
+  j = 0
+  largest_num = list[i]
+  final_largest_num = list.last
+  until largest_num == final_largest_num
+    if list[i] <= list[j] && list[j] > largest_num
+      i += 1 if i == 0
+      temp = list[i]
       list[i] = list[j]
-      list[j] = list[temp]
-      j -= 1
+      list[j] = temp
+      largest_num = list[i]
+      i += 1
+      j += 1
+    else
+      j += 1 if j < list.length - 1
     end
-    i += 1
   end
-  
-  return list[0..j].sort
-  
+  return list[0..(i-1)] if i > 1
+  return [list[0]] if i == 0
 end
 
 
