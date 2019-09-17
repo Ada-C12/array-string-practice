@@ -6,8 +6,8 @@ def remove_duplicates(list)
   if length == 0
     return []
   end 
-  length.times do |k|
-    if k > 0 && list[k] == list[k-1]
+  (1...length).each do |k|
+    if list[k] == list[k-1]
       i = k
       until i > length || list[i-1] == nil do 
         list[i - 1] = list[i]
