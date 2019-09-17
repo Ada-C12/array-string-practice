@@ -41,4 +41,5 @@ def longest_prefix(strings)
   return total
 end
 
+# Loop is not working, tests failed.
 #p longest_prefix(["flower","flow","flight])
