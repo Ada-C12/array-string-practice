@@ -22,24 +22,22 @@ end
 # Input: ["dog","racecar","car"]
 # Output: ""
 
-# Time Complexity: O(n) - depends on the length of strings
-# Space Complexity: O(n) - is reacreting a result total
+# Time Complexity: O(nm) - depends on the length of strings = n and length of string[0] = m
+# Space Complexity: O(m) - is reacreting a result total
 def longest_prefix(strings)
-  total = ""
-  start = strings[0]
-  
+  result = ""
   i = 0
-  start.length.times do |i|
-    char = start[i]
-    
-    strings.length.times do |j|
-      if strings[j][i] == char
-        total += char
+  
+  strings[0].each_char do |letter|
+    strings.each do |string|
+      if letter != string[i]
+        return result
       end
     end
+    
+    result += letter
+    i += 1
   end
-  return total
+  
+  return result 
 end
-
-# Loop is not working, tests failed.
-#p longest_prefix(["flower","flow","flight])
