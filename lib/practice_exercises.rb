@@ -22,21 +22,20 @@ end
 
 # time complexity: ?
 # Space Complexity: ?
-# start_with?([prefixes]+) → true or false
-# include? other_str → true or false
+
 
 def longest_prefix(strings)
-  return_value = ""
+  a = ""
+  collection_of_letters = strings.first[0]
+  j = 0
   strings.each_with_index do |string, i|
-    char = string[i]
-    strings.each_with_index do |string, i|
-      if char != string[i]
-        return return_value
-      end
+    return a if string[i][j] != collection_of_letters
+    if j == strings.length
+      a << string[i][j]
     end
-    return_value << char
+    j += 1
   end
-  
+  return a
   raise NotImplementedError, "Not implemented yet"
 end
 
