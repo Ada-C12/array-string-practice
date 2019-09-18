@@ -24,13 +24,13 @@ describe "Practice Exercises" do
       expect(output).must_equal "fl"
     end
     
-    it "will work for Sabrina's strings" do
-      strings = [“flower”,“flower”,“flower”]
-      
-      output = longest_prefix(string)
-      
-      expect(output).must_equal "flower"
-    end
+    # it "will work for Sabrina's strings" do
+    #   strings = [“flower”,“flower”,“flower”]
+    
+    #   output = longest_prefix(string)
+    
+    #   expect(output).must_equal "flower"
+    # end
     
     it "will work for the strings with the common prefix in the rear" do
       strings = ["flower","flow","flight", "fpastafl"]
