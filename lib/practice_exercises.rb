@@ -18,7 +18,18 @@ def remove_duplicates(list)
     i += 1
   end
   list[j] = list[length - 1]
-  list = list[0..j]
+  
+  ((j+1)..(length-1)).each do |index|
+    list.pop()
+  end
+  
+  # list.each_with_index do |item,index|
+  #   if item == nil
+  #     list.delete_at(index)
+  #   end
+  # end
+  
+  # list = list[0..j]
   return list
 end
 
