@@ -12,6 +12,7 @@ describe "Practice Exercises" do
 
     it "will remove duplicates for longer arrays" do
       expect(remove_duplicates([1, 2, 2, 3, 3, 4])).must_equal [1, 2, 3, 4]
+      # expect(remove_duplicates([1, 2, 2, 3, 3, 4, 5, 5])).must_equal [1, 2, 3, 4, 5]
     end
   end
 
