@@ -1,5 +1,5 @@
-# Time Complexity: O(n)
-# Space Complexity: O(1)
+# Time Complexity: O(n^2), where n is the length of input list - delete_at (O(n)) is nested under each loop (O(n))
+# Space Complexity: O(1), always return the modified input list (array)
 def remove_duplicates(list)
   if list.length < 2
     return list
@@ -15,8 +15,8 @@ def remove_duplicates(list)
   end
 end
 
-# Time Complexity: O(n^2)
-# Space Complexity: O(1)
+# Time Complexity: O(n*m), where n is the length of the longest string within input array, and m is the length of the input array
+# Space Complexity: O(1), ???
 def longest_prefix(strings)
   if strings.length < 2
     raise ArgumentError
